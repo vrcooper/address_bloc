@@ -87,19 +87,20 @@ end
         
 # # 21
 
-        def view_entry_number(array)
-            new_array = []
-            @address_book.entries.each_with_index do |entry, index|
-                if index > 0
-                new_array << entry + index
-                end
-                
-            new_array
-            end
-        end
+##def view_entry_number
         
-        puts entry.to_s
+        ##entry_number = []
+        
+        ##@address_book.entries.each_with_index do |entry, index|
             
+            ##if entry_number.include?(index)
+
+##puts entry.to_s
+##end
+##end
+
+
+
             
 
         def create_entry
