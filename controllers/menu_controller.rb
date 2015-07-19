@@ -87,19 +87,18 @@ end
         
 # # 21
 
-        def view_entry_number
-            number = gets.chomp.to_i
-            
-            if number.is_a? Integer
-                entry = @address_book.view_entry_number(number)
-                puts entry.to_s << "\n\n"
-            else
-            
-             puts "Sorry, that is not a valid input"
-             view_entry_number
-             end
-            
+        def view_entry_number(array)
+            new_array = []
+            @address_book.entries.each_with_index do |entry, index|
+                if index > 0
+                new_array << entry + index
+                end
+                
+            new_array
+            end
         end
+        
+        puts entry.to_s
             
             
 
