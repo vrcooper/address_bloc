@@ -5,38 +5,38 @@ require "csv"
 
 
 class  AddressBook
-    attr_accessor :entries
-    
-    def initialize
-        @entries = []
-        end
+  attr_accessor :entries
+  
+  def initialize
+    @entries = []
+  end
 
-    def add_entry(name, phone, email)
-        
+  def add_entry(name, phone, email)
+      
 # # 9
-       index = 0
-       @entries.each do |entry|
-           
-# # 10
+    index = 0
+    @entries.each do |entry|
+       
+    # # 10
 
-        if name < entry.name
-            break
-            end
-        
-        index += 1
-        end
-       
-       # # 11
-       
-       @entries.insert(index, Entry.new(name, phone, email))
-       end
+      if name < entry.name
+          break
+      end
+
+      index += 1
+      end
+
+  # # 11
+
+    @entries.insert(index, Entry.new(name, phone, email))
+  end
     
     ## 11 removes entries
     
-    def remove_entry(name, phone, email)
-        
-        @entries.delete(Entry.new(name, phone, email))
-    end
+  def remove_entry(name, phone, email)
+      
+      @entries.delete(Entry.new(name, phone, email))
+  end
 
 ## 7
 
@@ -58,7 +58,7 @@ class  AddressBook
         
 # Search AddressBook.entries for a specific entry by name
 
-        def binary_search(name)
+  def binary_search(name)
     ## 1
             lower = 0
             
@@ -87,5 +87,14 @@ class  AddressBook
         end
             
     end
+
+  def iterative_search(name)
+    entries.each do |entry|
+      if entry.name == name
+        return entry
+      end
+    end
+    return nil
+  end
 
 end
