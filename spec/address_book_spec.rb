@@ -164,7 +164,7 @@ context ".import_from_csv" do
             expect(entry_one.email).to eql "vcooper_us@yahoo.com"
             end
     
-    # Test the binary_search_method
+    # Test the binary_search method
     
         context "#binary_search" do
             it "searches AddressBook for a non-existent entry" do
@@ -177,7 +177,7 @@ context ".import_from_csv" do
                 book.import_from_csv("entries.csv")
                 entry = book.binary_search("Bill")
                 expect entry.instance_of?(Entry)
-                check_entry(entry "Bill", "555-555-4854", "bill@blocmail.com")
+                check_entry(entry, "Bill", "555-555-4854", "bill@blocmail.com")
             end
             
             it "search AddressBook for Bob" do
