@@ -45,7 +45,7 @@ end
             main_menu
         when 2
             system "clear"
-            puts "Please type entry number."
+            #puts "Please type entry number."
             view_entry_number
             main_menu
         when 3
@@ -99,17 +99,20 @@ end
         
 # # 21
 
-##def view_entry_number
+        def view_entry_number
         
-        ##entry_number = []
         
-        ##@address_book.entries.each_with_index do |entry, index|
+            @address_book.entries = [ ]
+            puts "Please select a number."
+            choice = gets.chomp.to_i
+            puts @address_book.entries[choice - 1].to_s
             
-            ##if entry_number.include?(index)
-
-##puts entry.to_s
-##end
-##end
+            
+            
+            system "clear"
+            puts "End of entry"
+        
+        end
 
 
 
