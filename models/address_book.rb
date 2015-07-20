@@ -62,7 +62,7 @@ class  AddressBook
     ## 1
             lower = 0
             
-            upper = entries.length -1
+            upper = entries.length - 1
     ## 2
             while lower <= upper
                 
