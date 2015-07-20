@@ -90,15 +90,20 @@ end
         def view_entry_number
         
         
-            @address_book.entries = [ ]
+            
             puts "Please select a number."
             choice = gets.chomp.to_i
-            puts @address_book.entries[choice - 1].to_s
+            entry = @address_book.entries[choice - 1]
             
             
             
-            system "clear"
-            puts "End of entry"
+            if choice > @address_book.entries.length || entry == nil
+                puts "The number you selected is invalid."
+            else
+                puts entry.to_s
+                entry_submenu(entry)
+            end
+            
         
         end
 
