@@ -38,6 +38,14 @@ class  AddressBook
       @entries.delete(Entry.new(name, phone, email))
   end
 
+## Final assigment demolish all entries
+
+def demolish_all_entries(name, phone, email)
+    @entries.delete(Entry.new(name, phone, email))
+end
+
+
+
 ## 7
 
 

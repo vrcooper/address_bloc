@@ -18,7 +18,8 @@ class MenuController
         puts "3 - Create an entry"
         puts "4- Search for an entry"
         puts "5 - Import entries from a CSV"
-        puts "6 - Exit"
+        puts "6 - Demolish"
+        puts "7 - Exit"
         
         
         
@@ -53,6 +54,10 @@ class MenuController
             read_csv
             main_menu
             when 6
+            system "clear"
+            demolish_all_entries
+            main_menu
+            when 7
             puts "Good-bye!"
             
             # # 8
@@ -284,5 +289,18 @@ def edit_entry(entry)
     puts entry
 end
 
+## Final assignment
+
+def demolish_all_entries
+    @address_book.entries.delete.each do |entry|
+    
+
+        puts "All entries have been deleted."
+        system "clear"
+        main_menu
+    end
+
+        
+end
 
 
