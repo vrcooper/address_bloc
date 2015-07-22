@@ -110,6 +110,7 @@ def view_entry_number
     if choice > @address_book.entries.length || entry == nil
         puts "The number you selected is invalid."
         else
+            system "clear"
         puts entry.to_s
         entry_submenu(entry)
     end
@@ -243,6 +244,8 @@ def entry_submenu(entry)
         
         when "n"
         # # 19
+
+        
         when "d"
         ## 7
         delete_entry(entry)
@@ -292,15 +295,12 @@ end
 ## Final assignment
 
 def demolish_all_entries
-    @address_book.entries.delete.each do |entry|
-    
-
-        puts "All entries have been deleted."
-        system "clear"
-        main_menu
-    end
+    @address_book.demolish
+    system "clear"
+    puts "All entries have been deleted."
+end
 
         
-end
+
 
 
