@@ -40,8 +40,9 @@ class  AddressBook
 
 ## Final assigment demolish all entries
 
-def demolish_all_entries(name, phone, email)
-    @entries.delete(Entry.new(name, phone, email))
+def demolish
+    @entries = [ ]
+
 end
 
 
@@ -59,10 +60,11 @@ end
             row_hash = row.to_hash
             add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
         end
+    end
         
-        def binary_search(name)
-            return nil
-        end
+        #def binary_search(name)
+            #return nil
+        #end
         
 # Search AddressBook.entries for a specific entry by name
 
@@ -105,4 +107,3 @@ end
     return nil
   end
 
-end
